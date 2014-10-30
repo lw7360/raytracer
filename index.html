@@ -12,24 +12,42 @@
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
-        <p>RayTracer</p>
+        <h1>RayTracer.js</h1>
 
         <div>
-          Upload an obj file:
+          <h2>Upload a scene:</h2>
           <input type="file" id="fileInput">
+        </div>
+        <hr>
+        <h2>Insert Objects:</h2>
+        <div>
+          <input type="text" class="form-control" placeholder="path to object (objs/scene.obj)" style="width: 250px;" id="objName">
+          <textarea class="form-control" rows="3" id="objText" placeholder="v 0 50 0"></textarea>
+          <button id="insertObj"><h3>Insert Object</h3></button>
+          <div id="curObjs"></div>
+        </div>
+        <hr>
+        <div>
+          <button id="render"><h2>Render</h2></button>
         </div>
 
         <div>
-          <canvas id="canvas" height="500" width="1000"></canvas>
+          <canvas id="canvas" height="1000" width="1000"></canvas>
         </div>
 
         <script src="src/jquery.js"></script>
         <script src="src/underscore.js"></script>
+        <script src="src/dropzone.js"></script>
+        <script src="src/gl-matrix.js"></script>
         <script src="src/color.js"></script>
         <script src="src/vector.js"></script>
         <script src="src/ray.js"></script>
         <script src="src/camera.js"></script>
         <script src="src/sphere.js"></script>
+        <script src="src/triangle.js"></script>
+        <script src="src/pointlight.js"></script>
+        <script src="src/directionallight.js"></script>
+        <script src="src/material.js"></script>
         <script src="src/raytracer.js"></script>
         <script src="src/parser.js"></script>
         <script src="src/scene.js"></script>
