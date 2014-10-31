@@ -46,8 +46,14 @@ Vector.prototype = {
   length: function() {
     return Math.sqrt(this.dot(this));
   },
+  magnitude: function() {
+    return this.length();
+  },
   unit: function() {
     return this.divide(this.length());
+  },
+  normalize: function() {
+    return this.unit();
   },
   min: function() {
     return Math.min(Math.min(this.x, this.y), this.z);
